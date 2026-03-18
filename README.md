@@ -1,6 +1,6 @@
 # pna-calc
 
-`pna-calc` is a lightweight sequence analysis tool for PNA design workflows. Primarily designed for screening possible PCR blockers.
+`pna-calc` is a lightweight sequence analysis tool for Peptide Nucleic Acid (PNA) PCR clamp design. Created to automate the role of [PNAtool](https://pnabio.com/pna-tool/) (used commonly in PNA discovery workflows) but also designed to be more flexible.
 
 It reads candidate sequences (FASTA), computes sequence metrics, predicts
 DNA/DNA nearest-neighbor Tm and PNA/DNA Tm, and writes results to CSV.
@@ -26,17 +26,17 @@ For each sequence, `pna-calc` reports:
 
 ## Installation
 
-### Option 1: Using an existing Python environment
-
-```bash
-pip install -r requirements.txt
-```
-
-### Option 2: Conda environment (example)
+### Option 1: Conda environment
 
 ```bash
 conda create -n pna_calc python=3.11 -y
 conda activate pna_calc
+conda install -c conda-forge biopython -y
+```
+
+### Option 2: Using an existing Python environment
+
+```bash
 pip install -r requirements.txt
 ```
 
@@ -202,6 +202,6 @@ keyword arguments.
 ## To do
 
 - Fully replicate Allawi et al 1997 Tm preds
-- Better approximate PNAtool
+- Better approximate PNAtool Tm preds
 - Use [PoacV9_01](https://apsjournals.apsnet.org/doi/10.1094/PBIOMES-05-20-0040-TA) as check example
  
